@@ -20,29 +20,6 @@
   border-radius: 0 0 3px 3px;
 }
 
-
-/* ---- particles.js container ---- */
-
-body {
-    margin: 0;
-    font: normal 75% Arial, Helvetica, sans-serif;
-  }
-  
-  canvas {
-    display: block;
-    vertical-align: bottom;
-  }
-  /* ---- particles.js container ---- */
-  
-  #particles-js {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #000000;
-  }
-  
-  
-
 /*CSS TEXT EFFECT*/
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,700,900,400italic,700italic,900italic);
 
