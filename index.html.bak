@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Sasa Subotic Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="CSS2.css" <body="" class="w3-light-blue w3-content"
+
+      style="max-width:1600px">
+  </head>
+  <body>
+    <script>
+  $(document).ready(function() {
+  $('.image-link').magnificPopup({type:'image'});
+});
+		</script>
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;"
+
+      id="mySidebar"><br>
+      <div class="w3-container"> <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-blue"
+
+          title="close menu"> <i class="fa fa-remove"></i> </a> <img src="https://i.imgur.com/rYEfGWJ.png"
+
+          alt="SasasSuboticHeader" style="width:65%;" class="w3-round"><br>
+        <br>
+        <h4><b>SASA SUBOTIC</b></h4>
+        <p class="w3-text-blue"> Technical Engineer Analyst <br>
+          CompTIA Sec+ Certified <br>
+          Azure Cloud Admin<br>
+          Bachelors of Science in Business Analytics &amp; Information Systems
+          Major</p>
+      </div>
+      <div class="w3-bar-block"> <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-blue"><i
+
+            class="fa fa-th-large fa-fw w3-margin-right"></i>PORTFOLIO</a> <a href="#about"
+
+          onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a>
+        <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i
+
+            class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a> </div>
+      <div class="w3-panel w3-large"> <a href="https://www.linkedin.com/in/sasa-s-6bb0a8141/"><i
+
+            class="fa fa-linkedin w3-hover-opacity" style="font-size:36px"></i></a>
+        <a href="https://github.com/sasasubotic?tab=repositories"><i class="fa fa-github w3-hover-opacity"
+
+            style="font-size:36px"></i></a> </div>
+    </nav>
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()"
+
+      style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:300px">
+          <!-- particles.js container -->
+    <div id="particles-js"></div>
+    <!-- scripts -->
+    <script src="../particles.js"></script>
+    <script src="js/app.js"></script>
+    <!-- stats.js -->
+    <script src="js/lib/stats.js"></script>
+        <!-- particles.js container -->
+    <div id="particles-js"></div>
+    <!-- scripts -->
+    <script src="../particles.js"></script>
+    <script src="js/app.js"></script>
+    <!-- stats.js -->
+    <script src="js/lib/stats.js"></script>
+    <script>
+  var count_particles, stats, update;
+  stats = new Stats;
+  stats.setMode(0);
+  stats.domElement.style.position = 'absolute';
+  stats.domElement.style.left = '0px';
+  stats.domElement.style.top = '0px';
+  document.body.appendChild(stats.domElement);
+  count_particles = document.querySelector('.js-count-particles');
+  update = function() {
+    stats.begin();
+    stats.end();
+    if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+      count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+    }
+    requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+</script> 
+      <!-- Header -->
+      <header id="portfolio"> <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;"
+
+            class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+        <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i
+
+            class="fa fa-bars"></i></span>
+        <div class="w3-container">
+          <div class="w3-section w3-bottombar w3-padding-16"> <img class="a" src="https://i.imgur.com/20BcLnK.png"
+
+              alt="" width:"800"="" height:"500"="" style="width:100%" width="800">
+          </div>
+        </div>
+      </header>
+      <!-- First Photo Grid-->
+      <div class="w3-row-padding">
+        <div class="w3-third w3-container w3-margin-bottom"> <a class="image-link"
+
+            href="https://i.imgur.com/3F3XM9U.gif"> <img src="https://i.imgur.com/3F3XM9U.gif"
+
+              alt="SasaSuboticcybersecurity" style="width:100%" class="w3-hover-opacity"
+
+              height="350" width="650"> </a>
+          <div class="w3-container w3-white"><a class="image-link" href="https://i.imgur.com/3F3XM9U.gif">
+            </a>
+            <p><b>CompTIA Sec+ Certified</b></p>
+            <p>Security+ Certified, as well as experience with programs/assets,
+              such as Wireshark (as shown above), penetration test, SIEMs and
+              binary code and more.</p>
+          </div>
+        </div>
+        <div class="w3-third w3-container w3-margin-bottom"> <a class="image-link"
+
+            href="https://i.imgur.com/RdIc4CA.gif"> <img src="https://i.imgur.com/RdIc4CA.gif"
+
+              alt="SasaSuboticCommandConsole" class="w3-hover-opacity" style="width:100%"
+
+              height="350" width="650"> </a>
+          <div class="w3-container w3-white">
+            <p><strong>Command Console Coding</strong></p>
+            <p>In other classes and within my spare time, I have worked with
+              command consoles to learn their functionalities. This is an
+              extract of my work, with more available in my GitHub. (link on the
+              sidebar!)</p>
+          </div>
+        </div>
+        <div class="w3-third w3-container"> <a class="image-link" href="https://cdn.dribbble.com/users/868082/screenshots/3985867/azure.gif">
+            <img src="https://cdn.dribbble.com/users/868082/screenshots/3985867/azure.gif"
+
+              alt="SasaSuboticSQLAccess" class="w3-hover-opacity" style="width:100%"
+
+              height="350" width="650"> </a>
+          <div class="w3-container w3-white"><a class="image-link" href="https://cdn.dribbble.com/users/868082/screenshots/3985867/azure.gif">
+            </a>
+            <p><strong>Experience with Microsoft Azure</strong></p>
+            <p>The nature of my work has given me fulltime experience working
+              with Azure Cloud environment &amp; infrastructure. This includes,
+              but is not limited to setting up and deploying virtual machines,
+              whitelists, &amp; proxy setup.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Second Photo Grid-->
+      <div class="w3-row-padding">
+        <div class="w3-third w3-container w3-margin-bottom"> <a class="image-link"
+
+            href="https://i.imgur.com/etmWHpr.png"> <img src="https://i.imgur.com/etmWHpr.png"
+
+              alt="SasaSuboticTableau" class="w3-hover-opacity" style="width:100%"
+
+              height="350" width="650"> </a>
+          <div class="w3-container w3-white"><a class="image-link" href="https://i.imgur.com/etmWHpr.png">
+            </a>
+            <p><strong>Database Experience</strong></p>
+            <p>Throughout the business analytics portion of my education (and
+              through the nature of the work I do), I have gained experience
+              with SQL and Access databases, as well as presenting data in
+              multiple formats (such as Tableau).</p>
+          </div>
+        </div>
+        <div class="w3-third w3-container w3-margin-bottom"> <a class="image-link"
+
+            href="https://i.imgur.com/mkZzl0H.gif"> <img src="https://i.imgur.com/mkZzl0H.gif"
+
+              alt="SasaSuboticAdobe" style="width:100%" class="w3-hover-opacity"
+
+              height="350" width="650"> </a>
+          <div class="w3-container w3-white"><a class="image-link" href="https://i.imgur.com/mkZzl0H.gif">
+            </a>
+            <p><b>Adobe Products</b></p>
+            <p>Since I've been working with Adobe products for almost 10 years
+              now, I've developed skill in Photoshop, AfterEffects, Premiere
+              Pro, Lightroom, and more! Look at this picture and view my header.</p>
+          </div>
+        </div>
+        <div class="w3-third w3-container"> <a class="image-link" href="https://i.imgur.com/x30Lzdj.gif">
+            <img src="https://i.imgur.com/x30Lzdj.gif" alt="SasaSuboticCodingProject"
+
+              class="w3-hover-opacity" style="width:100%" height="350" width="650">
+          </a>
+          <div class="w3-container w3-white">
+            <p><strong>Coding Principles and Fundamentals</strong></p>
+            <p>This was my final project for a coding class, which covers the
+              concept and usage of variables, methods, arrays, error messages,
+              among other basics of coding.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Pagination -->
+      <div class="w3-center w3-padding-32"> </div>
+      <!-- Images of Me -->
+      <div class="w3-row-padding w3-padding-16" id="about">
+        <div class="w3-col m6"> <img src="https://lh3.googleusercontent.com/NPl4Vuno3cx7LGyaMSQ-Yk_Q-lslQzL4WoqPPT9BXwpUkBdDGCSnC9I3iMsu0cshfTN4HJPS7IA7VYtj4egKU0uCR753bnw9Rdi_iJrcJhAps43JwM4ZjkkkCPniqrzpsFvsvBxTBoJ7mZURSpBWamq3FeknAOVpmZbK1URZJkec0tq7Lz3goAm_TMnOiQSRAhRoUB_iEsBDp3GPhsANaEi5UA_54StnIGCv4XaHuHzGm-nNVEiMWiM1W5o9IEl5grru_EAekrGz_rGo4NQQL-snknP3ndZ4pvSA-vTEBhb2P8pCB6WeqJ8x9SRAA6hAF7TuKp7fSR-iEUpQNOCFVP-W7p5b8n_W3IBYn4A6fww4dvP57t04FOgSfHdvOHHeFSfEhYCtFlKeSOrOD-lANLG1ZBVGYhpC4SiVqETUCWoDigm6VG2OUY2c-zdltueRONLJ75pzDm449FHZSQreqQJgjexAc_kHUl8KvuUzc53WLi0IZr872jI-cT_jZy9O10HdJWptTcLXMmlYT24qbimWk9aBcr5SZ9Bhzn72KztRJc1P3Kp-_H17su4BxWb_X035kYBQ3c9J0JYylt35qVNqUl5PSAyYp6t8c85KgbrnlZFc8N_liRdlKCO24tu_80P7UMpvRTJt96P6D2foFP9jEcYw68OAAwkvtctIfTbXsqr80uSKaw=w1140-h760-no"
+
+            alt="SasaSubotic" style="width:100%"> </div>
+        <div class="w3-col m6"> <img src="https://lh3.googleusercontent.com/N8Ljd8UROiyAku3cMYSXxGhpwYNmAHKRYSXOpUbYzVstCpjAQ-llbbjoOcm9-nefauR8XuExKNOVQbjhB9ja33-y0jlc3iNXn5mYVtg_npdmpKhWZ6zLSsegiO1A3QZUWxo3OhYQAdMIv2KZzLe02eRLcTPYXn5mCxb-S37tEq6qL3gKGbo5g238bg_0fBoGwpLsHb-eCPRhsWCXxckunNk069VDJWVRvrUa92VaWRcxcc86ayrWnIZFPZjhvUogleY0N9io59f8ot27KB6Y6cWx2CurKqrAKXBkk9fUR7rkW_Of83JFaZcK11OafGtpc8amqyxYcF3sEOKo7iyBXCM2fDzZUFZtQD4Ic_7Gmd1Id_twuLiEW_v4YpqwwZPeWmn6u-pqcmrpB-nzOVMH5ZRGoBgH6bP6J9_isqAXeZm3d6hqReNptWGlCYH4x6cI2mlakoXgo9XYlu68-E0lMu2LckG6zFQqnKwQOtr8QEC19F2XE5ea0gexhXt8hrLY4y2JY306KCUe0lC1oLJ3fsA8Yy7me_-GR2sbs3KjIipX92-m16duTpSwbZ6Io0lDRpZ_TPTgADAuoyX0A_qatCw_dYV0kTBcp2Ku7Ch0datJQH0o7Ym2_Gg18VvN65ySjrmaIay7BLF0PeGlWpOTXF6imdTcbu_0a-6bwW8EqvmLY9pZE6urJA=w760-h506-no"
+
+            alt="SasaSubotic" style="width:100%"> </div>
+      </div>
+      <style> 
+
+</style> <div class="w3-container w3-padding-large" style="margin-bottom:32px @font-face {
+  font-family: myFirstFont;  src: url(sansation_light.woff)">
+        <h4><b>About Me</b></h4>
+        <p>Profesonally, I am a Technical Engineer for Accenture Federal
+          Services, since February of 2020. I graduated with my B.S. from
+          University of South Florida, majoring in Business Analytics &amp;
+          Info. Systems. I have worked at CAE USA and TechData where, through my
+          experience, I was able to effectively learn to work within teams, and
+          developed a passion for technology and the changing world. With
+          Accenture, my expertise is more along the basis of Azure Cloud, Agile
+          Methodlogies such as Kanban/Scrum, and other more minor technological
+          advances. </p>
+        <p>In a less professional sense, I've always been a creative and
+          outgoing person. One of my main hobbies is traveling/photography, as I
+          have been in Milwaukee/Chicago, New York, Washington DC, Orlando,
+          Serbia, Croatia, Bosnia, Slovenia, Germany, and I plan on seeing even
+          more. I also enjoy exercise in general, mainly with sports and some
+          lifting at the gym, along with cooking, which has become a passion of
+          mine over the years. In general, I'm just usually out and about if I
+          do have freetime, enjoying sights and locally owned areas that
+          surround my living space in the DMV area.</p>
+        <hr>
+        <h4>My Resume is available for download below!</h4>
+        <p><a href="https://drive.google.com/file/d/1zvrPqTezWtf9zB8-8LXrwtdtfcqbkOO-/view?usp=sharing">
+            <button class="w3-button w3-blue w3-padding-large w3-margin-top w3-margin-bottom">
+              <i class="fa fa-download w3-margin-right"></i>Download Resume </button>
+          </a> </p>
+        <hr> </div>
+      <!-- Contact Section -->
+      <div class="w3-container w3-padding-large w3-white">
+        <h4 id="contact"><b>Contact Information</b></h4>
+        <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
+          <div class="w3-third w3-light-blue">
+            <p><i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i></p>
+            <p>sasa@mail.usf.edu <br>
+              sasa.subotic@accenturefederal.com</p>
+          </div>
+          <div class="w3-third w3-blue">
+            <p><i class="fa fa-map-marker w3-xxlarge w3-text-light-grey"></i></p>
+            <p>Washington D.C. <br>
+              DMV Area</p>
+          </div>
+          <div class="w3-third w3-light-blue">
+            <p><i class="fa fa-phone w3-xxlarge w3-text-light-grey"></i></p>
+            <p>727-480-9025 </p>
+          </div>
+        </div>
+        <hr class="w3-opacity"> </div>
+    </div>
+    <!-- End page content -->
+    <script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+  </body>
+</html>

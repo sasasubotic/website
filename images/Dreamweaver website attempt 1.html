@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script></script>
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+	/* Style the Image Used to Trigger the Modal */
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+</style>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container">
+    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+      <i class="fa fa-remove"></i>
+    </a>
+    <img src="C:\Users\Sasa\Downloads\html project\images\Untitled-1.png" style="width:65%;" class="w3-round"><br><br>
+    <h4><b>PORTFOLIO</b></h4>
+    <p class="w3-text-grey">&nbsp;</p>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>PORTFOLIO</a> 
+    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a> 
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
+  </div>
+  <div class="w3-panel w3-large"> <i class="fa fa-linkedin w3-hover-opacity" style="font-size:36px"></i>
+	  <i class="fa fa-github" style="font-size:36px"></i>
+  </div>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Header -->
+  <header id="portfolio">
+    <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+    <div class="w3-container">
+      <h1><strong>Sasa Subotic's Portfolio</strong></h1>
+      <div class="w3-section w3-bottombar w3-padding-16">
+		  <img class="a" src ="images/THUMBNAIL TEMPLATE-Recovered.png" alt="" width="800" style="width:100%" height:"500">
+				</div>
+    </div>
+  </header>
+  
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+     <img id="myImg" src="C:\Users\Sasa\Downloads\html project\images\SnstrUcTOM.gif" alt="Subotic_3" height="300" width="800" class="w3-hover-opacity" style="width:100%">
+
+		<!-- The Modal -->
+		<div id="myModal" class="modal">
+
+  		<!-- The Close Button -->
+  		<span class="close">&times;</span>
+
+  		<!-- Modal Content (The Image) -->
+  		<img class="modal-content" id="img01">
+
+  		<!-- Modal Caption (Image Text) -->
+  		<div id="caption"></div>
+		</div>
+      <div class="w3-container w3-white">
+        <p><strong>Final Coding Assignment for Business Application Development</strong></p>
+        <p>This was my first ever final project for a coding class, as it included variables, methods, arrays, error messages, and more!</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="C:\Users\Sasa\Downloads\html project\images\XYtxClfkJ7.gif" alt="CommandConsole" width="800" height="300" class="w3-hover-opacity" style="width:100%">
+      <div class="w3-container w3-white">
+        <p><strong>Command Console Coding</strong></p>
+        <p>In other classes and in my free time, I've worked with command consoles to learn their functionalities. This is a snippet of my work, and more is in my GitHub!</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container">
+      <img src="C:\Users\Sasa\Downloads\html project\images\oudIwIUiTA.gif" alt="SQLAccess" width="500" height="300" class="w3-hover-opacity" style="width:100%">
+      <div class="w3-container w3-white">
+        <p><strong>Work with Microsoft Access/SQL</strong></p>
+        <p>Due to various school projects involving SQL and Access and other database tools, I've been able to develop an understanding of its works and how one can use SQL/Databases.</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="C:\Users\Sasa\Downloads\html project\images\PgaKvDgckA.gif" alt="Tableau" width="650" height="350" class="w3-hover-opacity" style="width:100%">
+      <div class="w3-container w3-white">
+        <p><strong>Tableau Work</strong></p>
+        <p>As one does in a Business Analytics portion of a degree, you're exposed to other ways of viewings tatistics and software and how to present it, and Tableau happens to be a skill of mine.</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="C:\Users\Sasa\Downloads\html project\images\yp7aXOvGjn.gif" alt="Adobe" width="650" height="350" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Adobe Products</b></p>
+        <p>Since I've been working with Adobe products for almost 10 years now, I've developed skill in Photoshop, AfterEffects ,Premiere Pro, Lightroom, and more!</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container">
+      <img src="C:\Users\Sasa\Downloads\html project\images\kk7fJ4UWRh.gif" alt="cybersecurity" width="650" height="350"style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Basic Cybersecurity Training</b></p>
+        <p>Reliaquest sponsored a bootcamp for USF students to learn cybersecurity principles, such as Wireshark (as shown above), penetration test, SIEMs and binary code and more.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32"> </div>
+
+  <!-- Images of Me -->
+  <div class="w3-row-padding w3-padding-16" id="about">
+    <div class="w3-col m6">
+      <img src="C:\Users\Sasa\Downloads\html project\images\Profile Pic.png" alt="Me" style="width:100%">
+    </div>
+    <div class="w3-col m6">
+      <img src="C:\Users\Sasa\Downloads\html project\images\C9663390-ABAF-4E73-A46B-E7ADF49A9306.jpg" alt="Me" style="width:100%" >
+    </div>
+  </div>
+
+  <div class="w3-container w3-padding-large" style="margin-bottom:32px">
+    <h4><b>About Me</b></h4>
+    <p>I'm currently a student at USF due to graduate in 2019. I'm a BAIS major (formely known as MIS, or Management Info. Systems), and I'm a part-time IT Audit co-op currently for CAE USA, but I've accepted an offer to work for Accenture Federal Services in Washington D.C. Through my experiences with TechData in another internship, I was able to effectively learn to work in teams, and develop a passion for technology and the changing world.</p>
+    <p>In a less professional sense, I've always been a creative and outgoing person. One of my main hobbies is traveling/photography, as just in the past year, I have been in Milwaukee/Chicago, New York,, Washington DC, Orlando, Serbia, Croatia, Bosnia, Slovenia, Germany, and I plan on seeing even more.</p>
+    <p>I also enjoy exercise in general, mainly with sports and some lifting at the gym, along with cooking, which has become a passion of mine over the years. In general, i'm just usually out and about if I do have freetime, enjoying sights and locally owned areas that surround my living space in the Tampa Bay Area, but soon to be Washington D.C.</p>
+    <hr>
+    
+    <h4>Technical Skills</h4>
+    <!-- Progress bars / Skills -->
+    <p>Photography</p>
+    <div class="w3-grey"> </div>
+    <p>Web Design</p>
+    <div class="w3-grey"> </div>
+    <p>Photoshop</p>
+    <div class="w3-grey"> </div>
+    <p><a href="/images/myw3schoolsimage.jpg" download>
+      <button class="w3-button w3-dark-grey w3-padding-large w3-margin-top w3-margin-bottom">
+        <i class="fa fa-download w3-margin-right"></i>Download Resume
+      </button>
+		</a>
+    </p>
+    <hr>
+<!-- Pricing Tables -->
+  </div>
+  
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-large w3-grey">
+    <h4 id="contact"><b>Contact Me</b></h4>
+    <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
+      <div class="w3-third w3-dark-grey">
+        <p><i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i></p>
+        <p>email@email.com</p>
+      </div>
+      <div class="w3-third w3-teal">
+        <p><i class="fa fa-map-marker w3-xxlarge w3-text-light-grey"></i></p>
+        <p>Chicago, US</p>
+      </div>
+      <div class="w3-third w3-dark-grey">
+        <p><i class="fa fa-phone w3-xxlarge w3-text-light-grey"></i></p>
+        <p>512312311</p>
+      </div>
+    </div>
+    <hr class="w3-opacity">
+    <form action="/action_page.php" target="_blank">
+      <div class="w3-section">
+        <label>Name</label>
+</div>
+      <div class="w3-section">
+        <label>Email</label>
+</div>
+      <div class="w3-section">
+        <label>Message</label>
+</div>
+</form>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-dark-grey">
+  <div class="w3-row-padding">
+    <div class="w3-third">
+      <h3>FOOTER</h3>
+      <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </div>
+  
+    <div class="w3-third">
+      <h3>BLOG POSTS</h3>
+      <ul class="w3-ul w3-hoverable">
+        <li class="w3-padding-16">
+          <img src="/w3images/workshop.jpg" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large">Lorem</span><br>
+          <span>Sed mattis nunc</span>
+        </li>
+        <li class="w3-padding-16">
+          <img src="/w3images/gondol.jpg" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large">Ipsum</span><br>
+          <span>Praes tinci sed</span>
+        </li> 
+      </ul>
+    </div>
+
+    <div class="w3-third">
+      <h3>POPULAR TAGS</h3>
+      <p>
+        <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">London</span>
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom">IKEA</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">NORWAY</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">DIY</span>
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Baby</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Family</span>
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Clothing</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Shopping</span>
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Sports</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Games</span>
+      </p>
+    </div>
+
+  </div>
+  </footer>
+  
+  <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>
