@@ -1,133 +1,117 @@
-/* -----------------------------------------------
-/* How to use? : Check the GitHub README
-/* ----------------------------------------------- */
+const canvas = document.querySelector("#canvas");
+const ctx = canvas.getContext("2d");
 
-/* To load a config file (particles.json) you need to host this demo (MAMP/WAMP/local)... */
-/*
-particlesJS.load('particles-js', 'particles.json', function() {
-  console.log('particles.js loaded - callback');
-});
-*/
+let w, h, balls = [];
+let mouse = {
+	x: undefined,
+	y: undefined
+}
+let rgb = [
+	"rgb(26, 188, 156)",
+	"rgb(46, 204, 113)",
+	"rgb(52, 152, 219)",
+	"rgb(155, 89, 182)",
+	"rgb(241, 196, 15)",
+	"rgb(230, 126, 34)",
+	"rgb(231, 76, 60)"
+]
 
-/* Otherwise just put the config content (json): */
+function init() {
+	resizeReset();
+	animationLoop();
+}
 
-particlesJS('particles-js',
-  
-  {
-    "particles": {
-      "number": {
-        "value": 80,
-        "density": {
-          "enable": true,
-          "value_area": 800
-        }
-      },
-      "color": {
-        "value": "#ffffff"
-      },
-      "shape": {
-        "type": "circle",
-        "stroke": {
-          "width": 0,
-          "color": "#000000"
-        },
-        "polygon": {
-          "nb_sides": 5
-        },
-        "image": {
-          "src": "img/github.svg",
-          "width": 100,
-          "height": 100
-        }
-      },
-      "opacity": {
-        "value": 0.5,
-        "random": false,
-        "anim": {
-          "enable": false,
-          "speed": 1,
-          "opacity_min": 0.1,
-          "sync": false
-        }
-      },
-      "size": {
-        "value": 5,
-        "random": true,
-        "anim": {
-          "enable": false,
-          "speed": 40,
-          "size_min": 0.1,
-          "sync": false
-        }
-      },
-      "line_linked": {
-        "enable": true,
-        "distance": 150,
-        "color": "#ffffff",
-        "opacity": 0.4,
-        "width": 1
-      },
-      "move": {
-        "enable": true,
-        "speed": 6,
-        "direction": "none",
-        "random": false,
-        "straight": false,
-        "out_mode": "out",
-        "attract": {
-          "enable": false,
-          "rotateX": 600,
-          "rotateY": 1200
-        }
-      }
-    },
-    "interactivity": {
-      "detect_on": "canvas",
-      "events": {
-        "onhover": {
-          "enable": true,
-          "mode": "repulse"
-        },
-        "onclick": {
-          "enable": true,
-          "mode": "push"
-        },
-        "resize": true
-      },
-      "modes": {
-        "grab": {
-          "distance": 400,
-          "line_linked": {
-            "opacity": 1
-          }
-        },
-        "bubble": {
-          "distance": 400,
-          "size": 40,
-          "duration": 2,
-          "opacity": 8,
-          "speed": 3
-        },
-        "repulse": {
-          "distance": 200
-        },
-        "push": {
-          "particles_nb": 4
-        },
-        "remove": {
-          "particles_nb": 2
-        }
-      }
-    },
-    "retina_detect": true,
-    "config_demo": {
-      "hide_card": false,
-      "background_color": "#b61924",
-      "background_image": "",
-      "background_position": "50% 50%",
-      "background_repeat": "no-repeat",
-      "background_size": "cover"
-    }
-  }
+function resizeReset() {
+	w = canvas.width = window.innerWidth;
+	h = canvas.height = window.innerHeight;
+}
 
-);
+function animationLoop() {
+	ctx.clearRect(0, 0, w, h);
+	ctx.globalCompositeOperation = 'lighter';
+	drawBalls();
+
+	let temp = [];
+	for (let i = 0; i < balls.length; i++) {
+		if (balls[i].time <= balls[i].ttl) {
+			temp.push(balls[i]);
+		}
+	}
+	balls = temp;
+
+	requestAnimationFrame(animationLoop);
+}
+
+function drawBalls() {
+	for (let i = 0; i < balls.length; i++) {
+		balls[i].update();
+		balls[i].draw();
+	}
+}
+
+function mousemove(e) {
+	mouse.x = e.x;
+	mouse.y = e.y;
+
+	for (let i = 0; i < 3; i++) {
+		balls.push(new Ball());
+	}	
+}
+
+function mouseout() {
+	mouse.x = undefined;
+	mouse.y = undefined;
+}
+
+function getRandomInt(min, max) {
+	return Math.round(Math.random() * (max - min)) + min;
+}
+
+function easeOutQuart(x) {
+	return 1 - Math.pow(1 - x, 4);
+}
+
+class Ball {
+	constructor() {
+		this.start = {
+			x: mouse.x + getRandomInt(-20, 20),
+			y: mouse.y + getRandomInt(-20, 20),
+			size: getRandomInt(30, 40)
+		}
+		this.end = {
+			x: this.start.x + getRandomInt(-300, 300),
+			y: this.start.y + getRandomInt(-300, 300)
+		}
+
+		this.x = this.start.x;
+		this.y = this.start.y;
+		this.size = this.start.size;
+
+		this.style = rgb[getRandomInt(0, rgb.length - 1)];
+
+		this.time = 0;
+		this.ttl = 120;
+	}
+	draw() {
+		ctx.fillStyle = this.style;
+		ctx.beginPath();
+		ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+		ctx.closePath();
+		ctx.fill();
+	}
+	update() {
+		if (this.time <= this.ttl) {
+			let progress = 1 - (this.ttl - this.time) / this.ttl;
+
+			this.size = this.start.size * (1 - easeOutQuart(progress));
+			this.x = this.x + (this.end.x - this.x) * 0.01;
+			this.y = this.y + (this.end.y - this.y) * 0.01;
+		}
+		this.time++;
+	}
+}
+
+window.addEventListener("DOMContentLoaded", init);
+window.addEventListener("resize", resizeReset);
+window.addEventListener("mousemove", mousemove);
+window.addEventListener("mouseout", mouseout);
