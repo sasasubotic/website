@@ -2,7 +2,7 @@ body {
 	margin: 0;
 	padding: 0;
 	height: 100vh;
-	background-color: #222;
+	background-image: linear-gradient(rgba(0,0,0,0.5)), rgba(0,0,0,0.5), url(images\dc.jpg);
 }
 canvas#canvas {
 	position: fixed;
