@@ -14,8 +14,17 @@ canvas#canvas {
 }
 
 .centertext {
-	position: center;
-	color: #fff;
-	text-decoration: none;
-	font-size: 30px;
+	box-sizing: border-box;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  width: 100%;
+  height: 100vh;
+}
+
+h1 {
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 80px;
+  color: azure;
 }
