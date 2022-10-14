@@ -1,3 +1,6 @@
+#remove html file extension https://www.sasasubotic.com/home.html
+# to https://www.sasasubotic.com/home
 RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^\.]+)$ $1.html [NC,L]
+RewriteRule ^([^\.]+)$ $1.html [NC, L]
