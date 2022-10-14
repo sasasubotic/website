@@ -4,6 +4,7 @@ body {
 	height: 100vh;
 	background-image: linear-gradient(to bottom, transparent, rgb(0, 0, 0)), url(images/dc.jpg);
 }
+
 canvas#canvas {
 	position: fixed;
 	left: 0;
@@ -12,3 +13,9 @@ canvas#canvas {
 	height: 100%;
 }
 
+.centertext {
+	position: center;
+	color: #fff;
+	text-decoration: none;
+	font-size: 30px;
+}
