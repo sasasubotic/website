@@ -3,7 +3,7 @@ body {
 	padding: 0;
 	height: 100vh;
 	background-image: linear-gradient(to bottom, transparent, rgb(0, 0, 0)), url(images/dc.jpg);
-}
+      }
 
 canvas#canvas {
 	position: fixed;
@@ -11,4 +11,27 @@ canvas#canvas {
 	top: 0;
 	width: 100%;
 	height: 100%;
-}
+              }
+
+.centertext {
+  box-sizing: border-box;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  width: 100%;
+  height: 100vh;
+            }
+
+
+.shadow {
+  text-align: center;
+  color: white;
+  font: bold 92px Helvetica, Arial, Sans-Serif;
+  text-shadow: 1px 1px purple,
+      2px 2px purple,
+      3px 3px purple;
+  -webkit-transition: all 0.12s ease-out;
+  -moz-transition: all 0.12s ease-out;
+  -ms-transition: all 0.12s ease-out;
+  -o-transition: all 0.12s ease-out;
+        }
+      
+      
