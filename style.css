@@ -2,7 +2,7 @@ body {
 	margin: 0;
 	padding: 0;
 	height: 100vh;
-	background-image: linear-gradient(to bottom, transparent, rgb(0, 0, 0)), url(images\dc.jpg);
+	background-image: linear-gradient(to bottom, transparent, rgb(0, 0, 0)), url(images/dc.jpg);
 }
 canvas#canvas {
 	position: fixed;
