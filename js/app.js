@@ -7,13 +7,13 @@ let mouse = {
 	y: undefined
 }
 let rgb = [
-	"rgb(26, 188, 156)",
-	"rgb(46, 204, 113)",
-	"rgb(52, 152, 219)",
+	"rgb(26, 125, 156)",
+	"rgb(46, 99, 113)",
+	"rgb(52, 88, 177)",
 	"rgb(155, 89, 182)",
-	"rgb(241, 196, 15)",
+	"rgb(241, 196, 115)",
 	"rgb(230, 126, 34)",
-	"rgb(231, 76, 60)"
+	"rgb(231, 76, 160)"
 ]
 
 function init() {
@@ -53,7 +53,7 @@ function mousemove(e) {
 	mouse.x = e.x;
 	mouse.y = e.y;
 
-	for (let i = 0; i < 3; i++) {
+	for (let i = 0; i < 1; i++) {
 		balls.push(new Ball());
 	}	
 }
@@ -76,7 +76,7 @@ class Ball {
 		this.start = {
 			x: mouse.x + getRandomInt(-20, 20),
 			y: mouse.y + getRandomInt(-20, 20),
-			size: getRandomInt(30, 40)
+			size: getRandomInt(15, 12)
 		}
 		this.end = {
 			x: this.start.x + getRandomInt(-300, 300),
