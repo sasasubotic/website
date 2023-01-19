@@ -6,11 +6,15 @@ body {
   padding-left: 50px;
   padding-right: 50px;
   font-family: 'Lexend Deca', sans-serif;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, 1) 100%), url(images/dc.jpg), height(100%), width (100%), object-fit (contain);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, 1) 100%), url(images/dc.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
   
   @media screen and (max-width: 1024px) { /* Specific to this particular image */
-    body{
+    body {
       left: 50%;
       margin-left: -512px;   /* 50% */
     }
@@ -25,22 +29,18 @@ canvas#canvas {
 	height: 100%;
               }
 
-.wrapper.centertext {
+.centertext {
   box-sizing: border-box;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  position: absolute;
+  position: relative;
   height: 150px;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
             }
 
 
 .shadow {
   text-align: center;
   color: white;
-  font: bold 5vw Helvetica, Arial, Sans-Serif;
+  font: bold 92px Helvetica, Arial, Sans-Serif;
   text-shadow: 1px 1px purple,
       2px 2px purple,
       3px 3px purple;
