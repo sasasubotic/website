@@ -14,7 +14,7 @@ body {
 }
   
   @media screen and (max-width: 1024px) { /* Specific to this particular image */
-    body{
+    body {
       left: 50%;
       margin-left: -512px;   /* 50% */
     }
@@ -29,22 +29,18 @@ canvas#canvas {
 	height: 100%;
               }
 
-.wrapper.centertext {
+.centertext {
   box-sizing: border-box;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  position: absolute;
+  position: relative;
   height: 150px;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
             }
 
 
 .shadow {
   text-align: center;
   color: white;
-  font: bold 5vw Helvetica, Arial, Sans-Serif;
+  font: bold 92px Helvetica, Arial, Sans-Serif;
   text-shadow: 1px 1px purple,
       2px 2px purple,
       3px 3px purple;
