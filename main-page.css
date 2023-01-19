@@ -45,18 +45,6 @@ html {
 }
 
 
-/* ---- particles.js container ---- */
-
-#particles-js{
-  width: 100%;
-  height: auto;
-  background-color: #270092;
-  background-image: url('');
-  background-size: 100% 100%;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-}
-
 
 /*CSS TEXT EFFECT*/
 @import url('https://fonts.googleapis.com/css?family=Roboto:700');
@@ -110,4 +98,32 @@ html {
   71% {margin-top:0px;}
   99.99% {margin-top:0px;}
   100% {margin-top:-270px;}
+}
+
+.has-dropcap:first-letter {
+  float: left;
+  font-size: 6rem;
+  line-height: 0.65;
+  margin: 0.1em 0.1em 0.2em 0;
+}
+
+.dropcap {
+  background: #303030;
+  color: #FDF9F2;
+  float: left;
+  font-size: 6rem;
+  line-height: 1;
+  margin: 0.1em 0.1em 0.2em 0;
+  padding: 0.1em;
+}
+.dropcap:before,
+.dropcap:after {
+  content: "";
+  display: block;
+}
+.dropcap:before {
+  margin-top: -0.2em;
+}
+.dropcap:after {
+  margin-bottom: -0.15em;
 }
