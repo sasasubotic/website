@@ -1,69 +1,53 @@
+
+/* Body styling for landing page */
 body {
-  margin: auto;
-  width: 100%; 
-  padding-top: 300px;
-  padding-bottom: 300px;
-  padding-left: 50px;
-  padding-right: 50px;
-  font-family: 'Lexend Deca', sans-serif;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, 1) 100%), url(images/dc.jpg);
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(to bottom right, #333, #777), url(images/dc.jpg);
+    background-size: cover;
+    transition: transform 0.6s ease-in-out;
 }
-  
-  @media screen and (max-width: 1024px) { /* Specific to this particular image */
-    body{
-      left: 50%;
-      margin-left: -512px;   /* 50% */
+
+/* Intro message styling */
+.intro-message {
+    color: #fff;
+    text-align: center;
+    animation: fadeIn 2s ease;
+    cursor: pointer;
+}
+
+.intro-message h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.intro-message p {
+    font-size: 1.2em;
+    opacity: 0.8;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Shift animation to reveal main site */
+.shift-left {
+    transform: translateX(-100vw);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .intro-message h1 {
+        font-size: 2em;
     }
-  }
-
-
-canvas#canvas {
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-              }
-
-.wrapper.centertext {
-  box-sizing: border-box;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  position: absolute;
-  height: 150px;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-            }
-
-
-.shadow {
-  text-align: center;
-  color: white;
-  font: bold 5vw Helvetica, Arial, Sans-Serif;
-  text-shadow: 1px 1px purple,
-      2px 2px purple,
-      3px 3px purple;
-  -webkit-transition: all 0.12s ease-out;
-  -moz-transition: all 0.12s ease-out;
-  -ms-transition: all 0.12s ease-out;
-  -o-transition: all 0.12s ease-out;
-  -webkit-animation: glow 1s ease-in-out infinite alternate;
-  -moz-animation: glow 1s ease-in-out infinite alternate;
-  animation: glow 1s ease-in-out infinite alternate;
-        }
-
-@-webkit-keyframes glow {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #2e3bfd, 0 0 40px #2e3bfd, 0 0 50px #2e3bfd, 0 0 60px #2e3bfd, 0 0 70px #2e3bfd;
-        }
-  to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #6771ff, 0 0 40px #6771ff, 0 0 50px #6771ff, 0 0 60px #6771ff, 0 0 70px #6771ff, 0 0 80px #6771ff;
-     }
-                       }
-      
-      
+    .intro-message p {
+        font-size: 1em;
+    }
+}
